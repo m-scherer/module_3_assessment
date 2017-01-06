@@ -1,7 +1,7 @@
 class SearchController < ApplicationController
 
   def index
-    require "pry"; binding.pry
+    @stores = Store.create_stores(params[:q], 25)
   end
 
 end

@@ -13,13 +13,12 @@ class Store
     response = BestBuyService.new.find_stores_by_zip_area(zip, area)
     stores = JSON.parse(response.body, symbolize_names: true)[:stores]
     stores.map do |store|
-      require "pry"; binding.pry
       Store.new(
-        name: store.name,
-        city: store.city,
-        distance: store.distance,
-        phone: store.phone,
-        type: store.type
+        store[:longName],
+        store[:city],
+        store[:distance],
+        store[:phone],
+        store[:storeType]
       )
     end
   end

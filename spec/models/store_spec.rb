@@ -12,11 +12,11 @@ describe Store do
 
         expect(stores).to be_instance_of(Array)
         expect(store).to be_instance_of(Store)
-        expect(store).to response_to(:name)
-        expect(store).to response_to(:city)
-        expect(store).to response_to(:distance)
-        expect(store).to response_to(:phone)
-        expect(store).to response_to(:type)
+        expect(store).to respond_to(:name)
+        expect(store).to respond_to(:city)
+        expect(store).to respond_to(:distance)
+        expect(store).to respond_to(:phone)
+        expect(store).to respond_to(:type)
       end
     end
   end

@@ -4,6 +4,7 @@ class BestBuyService
     conn.get "/v1/stores(area(#{zip},#{area}))", {
                 format: 'json',
                 show: 'storeId,longName,city,distance,phone,storeType',
+                pageSize: 100,
                 apiKey: ENV['BEST_BUY_KEY']
               }
   end
