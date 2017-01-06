@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe 'As a User' do
-  context 'GET /api/v1/items' do
+  context 'DELETE /api/v1/items' do
     it 'returns items with id, name, description, and url' do
       items = create_list(:item, 2)
 
