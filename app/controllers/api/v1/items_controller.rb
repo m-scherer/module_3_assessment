@@ -18,9 +18,9 @@ class Api::V1::ItemsController < ApplicationController
 
   def create
     Item.create!(
-      name: params[:params][:name],
-      description: params[:params][:description],
-      image_url: params[:params][:image_url]
+      name: params[:name],
+      description: params[:description],
+      image_url: params[:image_url]
       )
     render json: Item.select("id, name, description, image_url").last
   end
