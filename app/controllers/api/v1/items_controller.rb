@@ -22,7 +22,8 @@ class Api::V1::ItemsController < ApplicationController
       description: params[:description],
       image_url: params[:image_url]
       )
-    render json: Item.select("id, name, description, image_url").last
+    render json: Item.select("id, name, description, image_url").last,
+      status: 201
   end
 
 end
