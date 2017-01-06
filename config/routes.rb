@@ -11,5 +11,5 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :search
+  resources :search, only: [:index]
 end
