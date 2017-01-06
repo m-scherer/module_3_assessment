@@ -1,7 +1,9 @@
 class Store
   attr_reader :name, :city, :distance, :phone, :type
+  attr_accessor :id
 
-  def initialize( name, city, distance, phone, type )
+  def initialize( id, name, city, distance, phone, type )
+    @id = id
     @name = name
     @city = city
     @distance = distance
@@ -14,6 +16,7 @@ class Store
     stores = JSON.parse(response.body, symbolize_names: true)[:stores]
     stores.map do |store|
       Store.new(
+        store[:storeId],
         store[:longName],
         store[:city],
         store[:distance],

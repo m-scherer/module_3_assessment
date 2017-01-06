@@ -1,7 +1,7 @@
 <h1><%= @stores.count %> Total Stores</h1>
 <% @stores.each do |store| %>
 <ul id="store">
-  <li id='store-name'>Name: <%= store.name %></li>
+  <li> <%= link_to "Name: #{store.name}", store_path(id: store.id), id: "name" %> </li>
   <li>City: <%= store.city %></li>
   <li>Distance: <%= store.distance %></li>
   <li>Phone: <%= store.phone %></li>

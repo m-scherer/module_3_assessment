@@ -7,7 +7,7 @@ describe 'As a user' do
         visit root_path
         fill_in :Search, with: "80202"
         click_on "Search"
-        click_link('#store-name')
+        click_on "Name: Best Buy Mobile - Cherry Creek Shopping Center"
 
         expect(current_path).to eq(store_path)
         expect(page).to have_content("Name:")
