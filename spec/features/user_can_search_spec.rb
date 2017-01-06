@@ -16,7 +16,7 @@ describe 'As a user' do
         # And I should see a message that says "16 Total Stores"
         expect(page).to have_content("16 Total Stores")
         # And I should see exactly 15 results
-        expect(page).should have_selector('#store-list', count: 15)
+        expect(page).to have_selector('#store', count: 16)
         # And I should see the long name, city, distance, phone number and store type for each of the 15 results
         expect(page).to have_content("Name:")
         expect(page).to have_content("City:")
